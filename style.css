@@ -1,0 +1,32 @@
+/* style.css */
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?shoes,clean') center center/cover no-repeat;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+  
+  /* Navbar */
+  .navbar-brand img {
+    margin-right: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #f8f9fa;
+  }
+  
+/* Testimonials */
+#testimoni blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+  }
+  #testimoni footer {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+    

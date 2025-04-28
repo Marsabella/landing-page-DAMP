@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CleanSole Studio</title>
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="CleanSole Studio" width="50" height="50" class="d-inline-block align-text-top">
+      CleanSole Studio
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero d-flex align-items-center text-center">
+  <div class="container">
+    <h1 class="display-4">Clean Your Steps with Us</h1>
+    <p class="lead">Perawatan dan perbaikan sepatu terbaik di kotamu.</p>
+    <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://source.unsplash.com/400x300/?clean-shoes" class="card-img-top" alt="Shoe Cleaning">
+          <div class="card-body">
+            <h5 class="card-title">Shoe Cleaning</h5>
+            <p class="card-text">Layanan pembersihan sepatu mendalam untuk semua jenis sepatu Anda.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://source.unsplash.com/400x300/?shoe-repair" class="card-img-top" alt="Shoe Repair">
+          <div class="card-body">
+            <h5 class="card-title">Shoe Repair</h5>
+            <p class="card-text">Perbaiki sol, jahitan, dan bagian sepatu yang rusak agar seperti baru lagi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://source.unsplash.com/400x300/?shoes" class="card-img-top" alt="Custom Repaint">
+          <div class="card-body">
+            <h5 class="card-title">Custom Repaint</h5>
+            <p class="card-text">Ganti warna dan desain sepatu Anda sesuai keinginan dengan kualitas terbaik.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimoni" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Apa Kata Mereka?</h2>
+      
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+  
+          <div class="carousel-item active text-center">
+            <blockquote class="blockquote">
+              <p class="mb-4">"Pelayanan cepat dan hasil sangat memuaskan! Sepatu saya jadi seperti baru."</p>
+              <footer class="blockquote-footer">Dimas P.</footer>
+            </blockquote>
+          </div>
+  
+          <div class="carousel-item text-center">
+            <blockquote class="blockquote">
+              <p class="mb-4">"Rekomendasi banget! Pekerjaannya rapi dan cepat."</p>
+              <footer class="blockquote-footer">Ayu S.</footer>
+            </blockquote>
+          </div>
+  
+          <div class="carousel-item text-center">
+            <blockquote class="blockquote">
+              <p class="mb-4">"Harga terjangkau, hasil memuaskan. Pasti balik lagi!"</p>
+              <footer class="blockquote-footer">Rian M.</footer>
+            </blockquote>
+          </div>
+  
+        </div>
+  
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>  
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center p-4">
+  <p>© 2025 CleanSole Studio. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
