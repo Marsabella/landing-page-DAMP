@@ -11,7 +11,6 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
   
   // Handle submit form order
   const orderForm = document.getElementById("orderForm");
-  
   if (orderForm) {
     orderForm.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -69,4 +68,10 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
         document.body.removeChild(toast);
       }, 300);
     }, 3000);
-  }  
+  }
+  // Inisialisasi carousel dengan auto slide setiap 5 detik
+const carousel = document.querySelector('#testimonialCarousel');
+const bsCarousel = new bootstrap.Carousel(carousel, {
+  interval: 5000, // Interval dalam milidetik (5000ms = 5 detik)
+  ride: 'carousel' // Memulai carousel secara otomatis
+});

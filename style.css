@@ -120,6 +120,57 @@ footer {
     font-weight: bold;
     color: #333;
 }
+.testimoni-carousel {
+    background-color: #fff5f8;
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 84, 0, 0.15);
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #9E0059;
+}
+.carousel-item blockquote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+carousel-item blockquote footer {
+    font-size: 1rem;
+    color: #777;
+}
+
+.carousel-indicators button {
+    background-color: #9E0059; /* Warna untuk indikator */
+}
+
+.carousel-indicators .active {
+    background-color: #e6007f; /* Warna aktif untuk indikator */
+}
+.carousel-item footer {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+/* Efek animasi untuk blockquote */
+.carousel-inner {
+    animation: slideEffect 1.5s ease-out;
+}
+
+@keyframes slideEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Order Section */
 .order-section {
@@ -153,6 +204,45 @@ footer {
 .order-form textarea:focus {
     border-color: #9E0059;
     box-shadow: 0 0 8px rgba(158, 0, 89, 0.5);
+}
+
+/* Floating Animation for Service Cards */
+.floating {
+    background: linear-gradient(135deg, #ffe3ec, #e7d8ff);
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+.floating:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Service Card Styling */
+.service-card {
+    background: linear-gradient(135deg, #ffe3ec, #e7d8ff);
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+}
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #9E0059;
 }
 
 /* Submit Button */

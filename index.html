@@ -80,7 +80,7 @@
 
       <!-- Card 1 -->
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card h-100">
+        <div class="card h-100 floating text-center">
           <img src="shoes-cleaning.png" class="card-img-top" alt="Shoe Cleaning">
           <div class="card-body">
             <h5 class="card-title">Shoes Cleaning</h5>
@@ -91,7 +91,7 @@
 
       <!-- Card 2 -->
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card h-100">
+        <div class="card h-100 floating text-center">
           <img src="shoes-repair.png" class="card-img-top" alt="Shoe Repair">
           <div class="card-body">
             <h5 class="card-title">Shoes Repair</h5>
@@ -102,7 +102,7 @@
 
       <!-- Card 3 -->
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card h-100">
+        <div class="card h-100 floating text-center">
           <img src="custom-repaint.png" class="card-img-top" alt="Custom Repaint">
           <div class="card-body">
             <h5 class="card-title">Custom Repaint</h5>
@@ -120,8 +120,13 @@
       <h2 class="text-center mb-5">Apa Kata Mereka?</h2>
       
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
         <div class="carousel-inner">
-  
           <div class="carousel-item active text-center">
             <blockquote class="blockquote">
               <p class="mb-4">"Pelayanan cepat dan hasil sangat memuaskan! Sepatu saya jadi seperti baru."</p>
@@ -146,15 +151,17 @@
         </div>
   
         <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </section>  
+  </div>
+</section>  
 
 <!-- Contact Section -->
 <section id="contact" class="py-5 bg-light">
