@@ -142,12 +142,47 @@
   }
   
   #orderSummary {
-    background: #e9f5ff;
-    border: 1px solid #b8daff;
-    padding: 20px;
-    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #4f46e5;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: ticketSlideUp 0.8s ease forwards;
+    transform-origin: bottom center;
+    display: none;
   }
-  
+
+  /* Animasi Tiket Muncul */
+  @keyframes ticketSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) rotateX(30deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) rotateX(0deg);
+    }
+  }
+
+  /* Hover effect input form */
+  .order-form input:focus,
+  .order-form select:focus,
+  .order-form textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+}
+
+/* Responsive adjustment for order summary */
+@media (max-width: 768px) {
+  #orderSummary {
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+}
+
   /* Responsive */
   @media (max-width: 768px) {
     #hero {
@@ -186,7 +221,7 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    background: #28a745;
+    background: #4caf50;
     color: white;
     padding: 15px 20px;
     border-radius: 8px;
@@ -195,10 +230,15 @@
     transform: translateY(-20px);
     transition: all 0.5s ease;
     z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  
   .toast-message.show {
     opacity: 1;
     transform: translateY(0);
+  }
+  .toast-message i {
+    font-size: 20px;
   }
   
