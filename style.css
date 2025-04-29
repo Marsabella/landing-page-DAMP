@@ -3,53 +3,72 @@
 /* Floating Animation (tetap) */
 .floating {
     animation: float 3s ease-in-out infinite;
-  }
-  
-  @keyframes float {
+}
+
+@keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
-  }
-  
-  /* Navbar Styling */
-  .navbar {
+}
+
+/* Navbar Styling */
+.navbar {
     background: white;
     transition: all 0.4s;
-  }
-  .navbar-brand img {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.navbar-brand img {
     margin-right: 10px;
-  }
-  .nav-link {
+}
+.nav-link {
+    color: #390099;
     font-weight: 500;
     margin: 0 10px;
-  }
-  .nav-link:hover {
-    color: #4f46e5;
-  }
-  .btn-order {
-    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    position: relative;
+}
+.nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #9E0059;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link:hover {
+    color: #9E0059;
+}
+
+.btn-order {
+    background: linear-gradient(45deg, #ff5400, #ffbd00);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-weight: bold;
     border-radius: 30px;
     transition: all 0.3s;
-  }
-  .btn-order:hover {
-    background: linear-gradient(45deg, #ff9900, #cc7a00);
-    color: white;
-  }
-  
-  /* Hero Section */
-  #hero {
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+}
+.btn-order:hover {
+    background: linear-gradient(45deg, #ffbd00, #ff5400);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 140, 0, 0.5);
+}
+
+/* Hero Section */
+#hero {
     height: 100vh;
-    background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+    background: linear-gradient(135deg, #f8fafc, #f0f0ff);
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  }
-  #hero::before {
+}
+#hero::before {
     content: "";
     position: absolute;
     top: -20%;
@@ -59,169 +78,134 @@
     background: url('https://images.unsplash.com/photo-1600180758890-567b7e38b9a3') no-repeat center center/cover;
     opacity: 0.1;
     z-index: 0;
-  }
-  #hero .container {
+}
+#hero .container {
     z-index: 1;
-  }
-  #hero h1 {
+}
+#hero h1 {
     font-size: 48px;
     font-weight: 800;
-  }
-  #hero p {
+}
+#hero p {
     font-size: 18px;
     margin-top: 20px;
-  }
-  #hero .btn-primary {
-    background-color: #4f46e5;
+}
+#hero .btn-primary {
+    background-color: #9E0059;
     border: none;
     padding: 12px 30px;
     border-radius: 30px;
-  }
-  #hero .btn-primary:hover {
-    background-color: #3730a3;
-  }
-  
-  /* Footer Styling */
-  footer {
+}
+#hero .btn-primary:hover {
+    background-color: #FF0054;
+}
+
+/* Footer Styling */
+footer {
     background-color: #f8f9fa;
     padding: 40px 0;
     text-align: center;
     font-size: 14px;
     color: #777;
-  }
-  
-  /* Testimoni Styling */
-  #testimoni blockquote {
+}
+
+/* Testimoni Styling */
+#testimoni blockquote {
     font-size: 1.2rem;
     font-style: italic;
     color: #555;
-  }
-  #testimoni footer {
+}
+#testimoni footer {
     margin-top: 1rem;
     font-weight: bold;
     color: #333;
-  }
-  
-  /* Order Section */
-  .order-section {
+}
+
+/* Order Section */
+.order-section {
     padding: 80px 20px;
     background: #f0f4f8;
     text-align: center;
-  }
-  .order-section h2 {
+}
+.order-section h2 {
     font-size: 36px;
     margin-bottom: 30px;
     font-weight: 700;
-  }
-  .order-form {
+}
+.order-form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  .order-form input,
-  .order-form select,
-  .order-form textarea {
+}
+.order-form input,
+.order-form select,
+.order-form textarea {
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 16px;
-  }
-  .submit-btn {
-    background-color: #4f46e5;
+    transition: 0.3s;
+}
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: #9E0059;
+    box-shadow: 0 0 8px rgba(158, 0, 89, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #390099;
     color: white;
     border: none;
     padding: 14px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-  }
-  .submit-btn:hover {
-    background-color: #4338ca;
-  }
-  
-  #orderSummary {
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+    transition: all 0.3s;
+}
+.submit-btn:hover {
+    background-color: #9E0059;
+    transform: translateY(-2px);
+}
+
+/* Order Summary (Tiket Style) */
+#orderSummary {
     background: #fff;
-    border: 2px dashed #4f46e5;
+    border: 2px dashed #FF5400;
     padding: 30px 20px;
     border-radius: 15px;
     width: 100%;
     max-width: 500px;
     margin: 30px auto;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    animation: ticketSlideUp 0.8s ease forwards;
-    transform-origin: bottom center;
+    box-shadow: 0 12px 30px rgba(255, 84, 0, 0.2);
+    animation: ticketFlipIn 0.8s ease forwards;
+    transform-origin: center bottom;
     display: none;
-  }
-
-  /* Animasi Tiket Muncul */
-  @keyframes ticketSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(50px) rotateX(30deg);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) rotateX(0deg);
-    }
-  }
-
-  /* Hover effect input form */
-  .order-form input:focus,
-  .order-form select:focus,
-  .order-form textarea:focus {
-  border-color: #4f46e5;
-  box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+    perspective: 800px;
 }
 
-/* Responsive adjustment for order summary */
-@media (max-width: 768px) {
-  #orderSummary {
-    padding: 20px 15px;
-    font-size: 14px;
-  }
-}
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    #hero {
-      text-align: center;
-      padding: 100px 20px;
-    }
-    #hero img {
-      margin-top: 20px;
-    }
-  }
-  /* AOS Custom Animations (optional styling) */
-[data-aos] {
-    opacity: 0;
-    transition-property: opacity, transform;
-  }
-  [data-aos].aos-animate {
-    opacity: 1;
-  }
-/* Animasi Fade In + Slide Up */
-@keyframes fadeSlideUp {
+/* New Ticket Animation */
+@keyframes ticketFlipIn {
     0% {
-      opacity: 0;
-      transform: translateY(30px);
+        opacity: 0;
+        transform: rotateX(90deg) translateY(50px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0);
     }
-  }
-  
-  .fade-slide-up {
-    animation: fadeSlideUp 0.8s ease forwards;
-  }
+}
+
 /* Toast Notification */
 .toast-message {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: #4caf50;
+    background: #FF5400;
     color: white;
     padding: 15px 20px;
     border-radius: 8px;
@@ -233,12 +217,39 @@
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  .toast-message.show {
+}
+.toast-message.show {
     opacity: 1;
     transform: translateY(0);
-  }
-  .toast-message i {
+}
+.toast-message i {
+    color: #FFBD00;
     font-size: 20px;
-  }
-  
+}
+
+/* Fade Slide Up Animation */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-slide-up {
+    animation: fadeSlideUp 0.8s ease forwards;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    #hero {
+        text-align: center;
+        padding: 100px 20px;
+    }
+    #orderSummary {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+}
