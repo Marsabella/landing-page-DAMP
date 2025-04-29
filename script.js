@@ -1,6 +1,6 @@
 // script.js
 
-// Cuma buat contoh tambahan kalau mau efek smooth scroll
+// Efek smooth scroll untuk navbar link
 document.querySelectorAll('a.nav-link').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -11,3 +11,28 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
     });
   });
   
+  // Handle submit form order
+const orderForm = document.getElementById("orderForm");
+if (orderForm) {
+  orderForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const email = document.getElementById("email").value;
+    const telepon = document.getElementById("telepon").value;
+    const layanan = document.getElementById("layanan").value;
+    const catatan = document.getElementById("catatan").value;
+
+    document.getElementById("summaryNama").innerText = nama;
+    document.getElementById("summaryEmail").innerText = email;
+    document.getElementById("summaryTelepon").innerText = telepon;
+    document.getElementById("summaryLayanan").innerText = layanan;
+    document.getElementById("summaryCatatan").innerText = catatan || "-";
+
+    const orderSummary = document.getElementById("orderSummary");
+    orderSummary.style.display = "block";
+    orderSummary.classList.add("fade-slide-up");
+
+    this.reset();
+  });
+}

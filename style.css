@@ -141,6 +141,13 @@
     background-color: #4338ca;
   }
   
+  #orderSummary {
+    background: #e9f5ff;
+    border: 1px solid #b8daff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
   /* Responsive */
   @media (max-width: 768px) {
     #hero {
@@ -159,4 +166,19 @@
   [data-aos].aos-animate {
     opacity: 1;
   }
-   
+/* Animasi Fade In + Slide Up */
+@keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-slide-up {
+    animation: fadeSlideUp 0.8s ease forwards;
+  }
+  
