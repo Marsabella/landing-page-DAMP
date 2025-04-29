@@ -178,6 +178,18 @@ carousel-item blockquote footer {
     background: #f0f4f8;
     text-align: center;
 }
+.order-section .lottie-container {
+    overflow: visible;
+  }
+  
+  .order-section lottie-player {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    display: block;
+    margin: 0 auto;
+  }
+  
 .order-section h2 {
     font-size: 36px;
     margin-bottom: 30px;
