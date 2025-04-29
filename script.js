@@ -11,7 +11,7 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
     });
   });
   
-  // Handle submit form order
+ // Handle submit form order
 const orderForm = document.getElementById("orderForm");
 if (orderForm) {
   orderForm.addEventListener("submit", function(e) {
@@ -33,6 +33,28 @@ if (orderForm) {
     orderSummary.style.display = "block";
     orderSummary.classList.add("fade-slide-up");
 
+    // Toast Notification
+    showToast("Order berhasil! Akan segera diproses.");
+
     this.reset();
   });
+}
+
+// Function untuk bikin toast notification
+function showToast(message) {
+  const toast = document.createElement("div");
+  toast.className = "toast-message";
+  toast.innerText = message;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => {
+      document.body.removeChild(toast);
+    }, 300);
+  }, 3000);
 }
