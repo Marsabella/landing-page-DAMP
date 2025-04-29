@@ -19,7 +19,7 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
      e.preventDefault();
  
      const nama = document.getElementById("nama").value;
-     const email = document.getElementById("email").value;
+     const email = document.getElementById('orderEmail').value;
      const telepon = document.getElementById("telepon").value;
      const layanan = document.getElementById("layanan").value;
      const catatan = document.getElementById("catatan").value;
